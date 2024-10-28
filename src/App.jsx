@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className='main'>
         <header>
-          <Link className='header__link' to={"/"}>
+          <Link className='header__link' to={"/Peliculas"}>
             <h1 className='title'> 🎬Peliculas</h1>
           </Link>
         </header>

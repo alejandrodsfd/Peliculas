@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { get } from "../data/httpClient";
 import { useState, useEffect } from "react";
 import { getMovieImg } from "../utils/getMovieImg";
+import { Helmet } from 'react-helmet-async';
 import "../assets/MovieDetails.css"
 export function MovieDetails() {
     const { movieId } = useParams();
@@ -28,6 +29,11 @@ export function MovieDetails() {
 
     return (
         <div className="details">
+            <Helmet>
+                <title>{movie.title} - Detalles</title>
+                <meta name="description" content={movie.overview} />
+                <meta property="og:image" content={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+            </Helmet>
             <h1 className="details__title">Titulo: {movie.title}</h1>
             <div className="details__container-content">
                 <div className="details__container-img">

@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Router>
+    <Router basename="/">
       <div className='main'>
         <header>
           <Link className='header__link' to={"/"}>

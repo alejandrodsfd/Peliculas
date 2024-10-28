@@ -1,0 +1,12 @@
+.main{
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+  color: #9F91FE;
+}
+.header__link{
+  text-decoration: none;
+}

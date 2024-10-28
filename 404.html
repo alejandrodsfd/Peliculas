@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=/Peliculas">
   <script>
-    window.location.replace("/Peliculas" + window.location.pathname);
+    // Verifica si la URL ya contiene "/Peliculas"
+    const basePath = "/Peliculas";
+    if (!window.location.pathname.startsWith(basePath)) {
+      window.location.replace(basePath + window.location.pathname + window.location.search);
+    } else {
+      window.location.replace(window.location.pathname + window.location.search);
+    }
   </script>
   <title>Redirecting...</title>
 </head>

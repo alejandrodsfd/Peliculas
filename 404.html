@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/Peliculas">
+  <title>Redirecting...</title>
   <script>
-    // Verifica si la URL ya contiene "/Peliculas"
+    // Define el path base para evitar redirecciones cíclicas
     const basePath = "/Peliculas";
+    
+    // Verifica si la URL actual necesita redirección
     if (!window.location.pathname.startsWith(basePath)) {
+      // Redirige con el path correcto
       window.location.replace(basePath + window.location.pathname + window.location.search);
-    } else {
-      window.location.replace(window.location.pathname + window.location.search);
     }
   </script>
-  <title>Redirecting...</title>
 </head>
 <body>
+  <p>Redireccionando a la página principal...</p>
 </body>
 </html>
+
